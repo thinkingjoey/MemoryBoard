@@ -1,0 +1,9 @@
+<p> Create a new board </p>
+
+<%= form_for @board do |f| %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
