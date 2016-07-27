@@ -1,16 +1,5 @@
-<%= form_for @picture, :html => {:multipart => true} do |f| %>
-  <%= f.error_messages %>
-  <%= f.hidden_field :board_id %>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.file_field :image %>
-  </p>
-  <p>
-    <%= f.label :remote_image_url, "or image URL" %><br/>
-    <%= f.text_field :remote_image_url %>
-  </p>
-  <p><%= f.submit %></p>
+<%= form_for(@picture, url: create_picture_path) do |f| %>
+  <%= f.hidden_field :board_id, :value => @board_id%>
+  <%= f.file_field :image %><br/>
+  <%= f.button :submit %>
 <% end %>

@@ -1,11 +1,17 @@
 class BoardsController < ApplicationController
   before_action :find_board, only: [:show, :edit, :update, :destroy]
+
+  def index
+    render :action => "profile"
+  end
+
   def profile
     @board=Board.all
   end
+
   def show
     @board = Board.find(params[:id])
-    @pictures=Picture.where(board_id: @board.id)
+    @picture =Picture.where(board_id: @board.id)
   end
 
   def new

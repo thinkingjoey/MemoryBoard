@@ -1,14 +1,18 @@
 class PicturesController < ApplicationController
+  def index
+    @picture = Picture.all
+  end
+
   def new
-    @picture= Picture.new(:picture_id => params[:picture_id])
+    @picture= Picture.new
+    @board_id=params[:board_id]
   end
 
   def create
-    @picture = Picture.new(params[:picture])
-    @board.user_id = current_user.id
+    @picture = Picture.new(params.require(:picture).permit(:image, :board_id))
     if @picture.save
       flash[:notice] = "Successfully created picture."
-      redirect_to @picture.board
+      redirect_to board_path(@picture.board_id)
     else
       render :action => 'new'
     end
