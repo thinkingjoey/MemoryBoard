@@ -1,9 +1,0 @@
-<% title "Boards" %>
-
-<% for board in @Boards %>
-  <div class="board">
-    <h2><%= link_to board.board_name, board%></h2>
-  </div>
-<% end %>
-
-<p><%= link_to "New Board", new_board_path %></p>

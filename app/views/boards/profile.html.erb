@@ -1,13 +1,11 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-
-<h1>Profile#profile_home</h1>
-
+<h1>Profile</h1>
+<h3> All Boards </h3>
 <%= link_to "Create a board", new_board_path %>
 
 <!-- <a href="/boards/show">Find a board</a> How to find a board -->
 
-<h1>All Boards</h1>
 <% current_user.boards.each do|board|%>
 <table class="table table-hover">
   <tr class="success">

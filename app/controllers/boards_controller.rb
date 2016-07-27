@@ -9,6 +9,7 @@ class BoardsController < ApplicationController
   end
 
   def new
+    @board =Board.new
   end
 
   def create
@@ -27,13 +28,16 @@ class BoardsController < ApplicationController
   end
 
   def update
-    @board = Board.find(params[:id])
-    if @board.update_attributes(params[:board])
-      flash[:notice] = "Successfully updated board."
-      redirect_to '/profile'
+    if @board.update(board_params)
+      redirect_to board_path(@board)
     else
-      render :action => 'edit'
+      render 'edit'
     end
+  end
+
+  def destroy
+    @board.destroy
+    redirect_to '/profile'
   end
 
   def board_params

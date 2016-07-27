@@ -5,7 +5,7 @@ class PicturesController < ApplicationController
 
   def create
     @picture = Picture.new(params[:picture])
-    
+    @board.user_id = current_user.id
     if @picture.save
       flash[:notice] = "Successfully created picture."
       redirect_to @picture.board
