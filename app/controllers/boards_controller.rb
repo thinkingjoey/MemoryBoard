@@ -1,4 +1,5 @@
 class BoardsController < ApplicationController
+  before_action :find_board, only: [:show, :edit, :update, :destroy]
   def profile
     @board=Board.all
   end
@@ -8,7 +9,6 @@ class BoardsController < ApplicationController
   end
 
   def new
-    @board = Board.new
   end
 
   def create
@@ -38,5 +38,9 @@ class BoardsController < ApplicationController
 
   def board_params
     params.require(:board).permit(:name)
+  end
+
+  def find_board
+    @board = Board.find(params[:id])
   end
 end

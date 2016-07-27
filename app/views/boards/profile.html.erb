@@ -3,16 +3,16 @@
 
 <h1>Profile#profile_home</h1>
 
-<a href="/boards/new">Create a board</a>
+<%= link_to "Create a board", new_board_path %>
 
-<a href="/boards/show">Find a board</a>
+<!-- <a href="/boards/show">Find a board</a> How to find a board -->
 
 <h1>All Boards</h1>
 <% current_user.boards.each do|board|%>
 <table class="table table-hover">
   <tr class="success">
   <td>
-    <%= board.name %>
+  <h2><%= link_to board.name, board_path(board) %></h2>
   </td>
 </tr>
 </table>

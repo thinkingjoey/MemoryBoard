@@ -1,9 +1,9 @@
-<p> Create a new board </p>
+<h1> Create a new board </h1>
+<p> Create a secrate code for your board, so that your friends can assess to your board and share the precious moments!</p>
 
-<%= form_for @board do |f| %>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p><%= f.submit %></p>
+<%= simple_form_for @board do |f| %>
+  <%= f.hidden_field :user_id %>
+  <%= f.input :name %>
+  <%= f.input :code %>
+  <%= f.button :submit %>
 <% end %>

@@ -1,5 +1,14 @@
 source 'https://rubygems.org'
 
+
+gem 'carrierwave'
+
+gem 'rmagick'
+
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
+
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+
 # Devis Auth gem
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -45,7 +54,4 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  gem 'carrierwave'
-
-  gem 'rmagick'
 end
