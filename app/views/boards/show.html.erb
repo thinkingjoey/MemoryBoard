@@ -10,13 +10,11 @@
   <%= link_to "Delete board", board_path(@board), method: :delete, data: {confirm: "Are you sure?"} %>
   <% end %>
 <% end %>
+<p>
+  <%= link_to "Add a Picture", new_picture_path(:board_id => @board) %>
+</p>
 
   <% @picture.each do |picture| %>
       <%= image_tag picture.image_url(:thumb) if picture.image? %>
         <%= link_to "remove", destroy_picture_path(picture), :confirm => 'Are you sure?', :method => :delete %>
   <% end %>
-
-
-<p>
-  <%= link_to "Add a Picture", new_picture_path(:board_id => @board) %>
-</p>

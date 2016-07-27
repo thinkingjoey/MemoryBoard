@@ -8,6 +8,10 @@ class PicturesController < ApplicationController
     @board_id=params[:board_id]
   end
 
+  def show
+    @picture = Picture.find(params[:id])
+  end
+
   def create
     @picture = Picture.new(params.require(:picture).permit(:image, :board_id))
     if @picture.save
