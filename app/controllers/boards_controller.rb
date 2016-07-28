@@ -1,6 +1,10 @@
 class BoardsController < ApplicationController
   before_action :find_board, only: [:show, :edit, :update, :destroy]
 
+  def match
+  end
+
+
   def index
     render :action => "profile"
   end

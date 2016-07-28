@@ -1,15 +1,9 @@
-<h2> <%= @board.name%> </h2>
-<h4> <%= @board.code %> </h4>
-
-
 <% if user_signed_in? %>
-  <% if @board.user_id == current_user.id %>
-
+<% if @board.user_id == current_user.id %>
   <%= link_to "Back to profile", root_path %> |
   <%= link_to "Edit board", edit_board_path(@board) %> |
   <%= link_to "Delete board", board_path(@board), method: :delete, data: {confirm: "Are you sure?"} %>
-  <% end %>
-<% end %>
+
 <p>
   <%= link_to "Add a Picture", new_picture_path(:board_id => @board) %>
 </p>
@@ -18,3 +12,9 @@
       <%= image_tag picture.image_url(:thumb) if picture.image? %>
         <%= link_to "remove", destroy_picture_path(picture), :confirm => 'Are you sure?', :method => :delete %>
   <% end %>
+
+  <% else %>
+  <h2> Sorry, you don't have access</h2>
+  <%= link_to "Back to profile", root_path %>
+  <% end %>
+<% end %>
