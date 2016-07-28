@@ -21,9 +21,10 @@ class BoardsController < ApplicationController
   def create
     @board = Board.new(board_params)
     @board.user_id = current_user.id
+    @board.code = SecureRandom.hex(8).to_str
     if @board.save
       flash[:notice] = "Successfully created board."
-      redirect_to '/profile'
+      redirect_to '/boards/:id'
     else
       render :action => 'new'
     end
@@ -47,7 +48,7 @@ class BoardsController < ApplicationController
   end
 
   def board_params
-    params.require(:board).permit(:name)
+    params.require(:board).permit(:name, :user_id, :code)
   end
 
   def find_board

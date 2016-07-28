@@ -8,6 +8,8 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 
+gem 'random_password_generator', '~> 1.0'
+
 # Devis Auth gem
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
