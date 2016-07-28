@@ -1,0 +1,5 @@
+<%= form_tag("/boards/match", method: "post") do %>
+  <%= label_tag(:q, "Insert the code:") %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag("submit") %>
+<% end %>

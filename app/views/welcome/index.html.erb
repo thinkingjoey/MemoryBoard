@@ -1,3 +1,9 @@
 <h1>Welcome to Memory Board</h1>
 <!-- <%= link_to "Sign out", destroy_user_session_path, :method => :delete %> -->
 <p> Gather all your event pictures in one place</p>
+
+<% if user_signed_in? %>
+<% if @board.user_id == current_user.id %>
+<%= render 'profile' %>
+<% end %>
+<% end %>

@@ -4,8 +4,11 @@ Rails.application.routes.draw do
 
   devise_for :users
   # resources :pictures
-  get '/boards/match' => 'boards#match', as: :match_board
+  get '/boards/match' => 'boards#search', as: :search_board
+  post '/boards/match' => 'boards#match', as: :match_board
+
   resources :boards
+
   get '/pictures' => 'pictures#index'
   post '/boards/:board_id/pictures' => 'pictures#create', as: :create_picture
   get '/boards/:board_id/pictures/new' => 'pictures#new', as: :new_picture
@@ -13,8 +16,4 @@ Rails.application.routes.draw do
   patch '/pictures/:id' => 'pictures#update', as: :update_picture
   delete '/pictures/:id' => 'pictures#destroy', as: :destroy_picture
 
-
 end
-
-#rake db:created
-#rails g controller welcome index

@@ -1,22 +1,27 @@
 class BoardsController < ApplicationController
   before_action :find_board, only: [:show, :edit, :update, :destroy]
 
-  def match
-    @board = Board.search(params[:search])
+  def search
   end
 
+  def match
+    @search = params[:search]
+    @board = Board.where(code: @search).first
+    @has_code = true
+    @picture =Picture.where(board_id: @board.id)
+    render :action => 'show'
+  end
 
   def index
-    render :action => "profile"
-  end
-
-  def profile
-    @board=Board.all
+    @board = Board.all
+    redirect_to '/profile'
   end
 
   def show
+    if @has_code = true #need to fix this
     @board = Board.find(params[:id])
     @picture =Picture.where(board_id: @board.id)
+  end
   end
 
   def new
@@ -29,7 +34,7 @@ class BoardsController < ApplicationController
     @board.code = SecureRandom.hex(8).to_str
     if @board.save
       flash[:notice] = "Successfully created board."
-      redirect_to '/boards/:id'
+      redirect_to '/profile'
     else
       render :action => 'new'
     end
