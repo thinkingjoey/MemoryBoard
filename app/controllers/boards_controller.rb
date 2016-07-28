@@ -2,6 +2,7 @@ class BoardsController < ApplicationController
   before_action :find_board, only: [:show, :edit, :update, :destroy]
 
   def match
+    @board = Board.search(params[:search])
   end
 
 

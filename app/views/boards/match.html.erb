@@ -1,0 +1,5 @@
+
+<%= form_tag("match_board_path", method: "get") do %>
+  <%= text_field_tag :code, params[:search] %>
+  <%= submit_tag("submit") %>
+<% end %>
