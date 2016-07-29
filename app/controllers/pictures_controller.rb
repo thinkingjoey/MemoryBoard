@@ -15,8 +15,8 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(params.require(:picture).permit(:image, :board_id))
     if @picture.save
-      flash[:notice] = "Successfully created picture."
-      redirect_to board_path(@picture.board_id)
+      @board = Board.find(@picture.board_id)
+      redirect_to "/boards/code/#{@board.code}"
     else
       render :action => 'new'
     end
@@ -29,7 +29,6 @@ class PicturesController < ApplicationController
   def update
     @picture= Picture.find(params[:id])
     if @picture.update_attributes(params[:picture])
-      flash[:notice] = "Successfully updated picture."
       redirect_to @picture.board
     else
       render :action => 'edit'
@@ -39,7 +38,6 @@ class PicturesController < ApplicationController
   def destroy
     @picture = Picture.find(params[:id])
     @picture.destroy
-    flash[:notice] = "Successfully destroyed picture."
     redirect_to @picture.board
   end
 end

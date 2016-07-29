@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   devise_for :users
   # resources :pictures
   get '/boards/match' => 'boards#search', as: :search_board
-  post '/boards/match' => 'boards#match', as: :match_board
-
+  post '/boards/:board_id' => 'boards#match', as: :match_board
+  get '/boards/code/:code' => 'boards#code_show'
   resources :boards
+
 
   get '/pictures' => 'pictures#index'
   post '/boards/:board_id/pictures' => 'pictures#create', as: :create_picture

@@ -6,10 +6,7 @@ class BoardsController < ApplicationController
 
   def match
     @search = params[:search]
-    @board = Board.where(code: @search).first
-    @has_code = true
-    @picture =Picture.where(board_id: @board.id)
-    render :action => 'show'
+    redirect_to "/boards/code/#{@search}"
   end
 
   def index
@@ -17,11 +14,16 @@ class BoardsController < ApplicationController
     redirect_to '/profile'
   end
 
+  def code_show
+    @board = Board.where(code: params[:code]).first
+    @has_code = true
+    @picture =Picture.where(board_id: @board.id)
+    render :action => 'show'
+  end
+
   def show
-    if @has_code = true #need to fix this
     @board = Board.find(params[:id])
     @picture =Picture.where(board_id: @board.id)
-  end
   end
 
   def new
@@ -34,10 +36,14 @@ class BoardsController < ApplicationController
     @board.code = SecureRandom.hex(8).to_str
     if @board.save
       flash[:notice] = "Successfully created board."
-      redirect_to '/profile'
+      redirect_to board_path(@board)
     else
       render :action => 'new'
     end
+  end
+
+  def find_board
+    @board = Board.find(params[:id])
   end
 
   def edit
@@ -57,11 +63,8 @@ class BoardsController < ApplicationController
     redirect_to '/profile'
   end
 
+
   def board_params
     params.require(:board).permit(:name, :user_id, :code)
-  end
-
-  def find_board
-    @board = Board.find(params[:id])
   end
 end
