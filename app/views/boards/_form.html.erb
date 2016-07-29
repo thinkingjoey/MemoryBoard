@@ -1,5 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+
+<body>
+<div class="form_wrapper">
 <%= simple_form_for @board do |f| %>
   <%= f.hidden_field :user_id %>
   <%= f.input :name %>
   <%= f.button :submit %>
 <% end %>
+</div>
+</body>
+</html>
