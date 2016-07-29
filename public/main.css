@@ -2,16 +2,24 @@
  background: url('https://hd.unsplash.com/photo-1430799800631-b8de6ce1fad5') no-repeat center center fixed;
  background-size: cover;
  opacity: .6;
+ position: static;
 }
 
-#WelcomeHeader{
+#title{
   text-align: center;
   font-family: 'Quicksand', sans-serif;
-  font-size: 8em;
+  font-size: 65px;
   line-height: 400%;
+  z-index: 1;
 }
 
-iframe{
-    width: 100%;
-    height: auto;
+
+
+.front{
+    width: 1289px;
+    height: 639px;
+    opacity: .6;
+    position: absolute;;
+    opacity: 0.4
+    z-index: 0;
   }
