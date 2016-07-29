@@ -11,7 +11,11 @@ class BoardsController < ApplicationController
 
   def index
     @board = Board.all
-    redirect_to '/profile'
+    if user_signed_in?
+    if @board.user_id == current_user.id
+    render 'profile'
+    end
+    end
   end
 
   def code_show

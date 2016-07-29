@@ -6,9 +6,10 @@
   <%= link_to "Edit board", edit_board_path(@board) %> |
   <%= link_to "Delete board", board_path(@board), method: :delete, data: {confirm: "Are you sure?"} %>|
   <%= link_to "Add a Picture", new_picture_path(:board_id => @board) %>
+
   <% @picture.each do |picture| %>
       <%= image_tag picture.image_url(:thumb) if picture.image? %>
-      <%= link_to "delete", destroy_picture_path(@picture), method: :delete, data: {confirm: "Are you sure?"} %>
+      <%= link_to "delete", destroy_picture_path(picture), method: :delete, data: {confirm: "Are you sure?"} %>
   <% end %>
 <% end %>
 <% end %>
