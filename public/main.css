@@ -5,6 +5,12 @@
  position: static;
 }*/
 
+#welcomeindex{
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+}
+
 #title{
   text-align: center;
   font-family: 'Quicksand', sans-serif;
@@ -30,5 +36,5 @@
   }
 
 h1, h2, h3 {
-  font-family: 'Poiret One', cursive;
+  font-family: 'Lobster';
 }
