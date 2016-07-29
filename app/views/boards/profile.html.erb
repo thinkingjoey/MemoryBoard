@@ -6,7 +6,7 @@
 
 <% current_user.boards.each do|board|%>
 <table class="table table-hover">
-  <tr class="success">
+  <tr>
   <td>
   <h2><%= link_to board.name, board_path(board) %></h2>
   </td>

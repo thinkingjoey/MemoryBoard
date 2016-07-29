@@ -1,5 +1,7 @@
+<div class="login_wrapper">
 <%= simple_form_for(@picture, url: create_picture_path) do |f| %>
   <%= f.hidden_field :board_id, :value => @board_id%>
   <%= f.file_field :image %><br/>
   <%= f.button :submit %>
 <% end %>
+</div>
