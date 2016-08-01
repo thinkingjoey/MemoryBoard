@@ -1,4 +1,4 @@
-/*body {
+/*.main {
  background: url('https://hd.unsplash.com/photo-1430799800631-b8de6ce1fad5') no-repeat center center fixed;
  background-size: cover;
  opacity: .6;
@@ -8,7 +8,7 @@
 #welcomeindex{
   margin: 0 auto;
   text-align: center;
-  font-family: 'Kaushan Script', cursive;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #title{
@@ -35,6 +35,18 @@
     z-index: 0;
   }
 
-h1, h2, h3 {
-  font-family: 'Lobster';
+li{
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  font-family: 'Poiret One', cursive;
+}
+
+h2, h3{
+  font-family: 'Arima Madurai', cursive;
+}
+
+p{
+  font-family: 'Nixie One', cursive;
 }

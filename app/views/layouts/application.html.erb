@@ -1,29 +1,33 @@
-
         <title>Memory Board</title>
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
         <%= csrf_meta_tags %>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Arima+Madurai:200' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
     <body id="welcomeindex">
         <nav class="navbar navbar-default">
             <div class="container">
                 <ul class="nav navbar-nav">
                     <% if user_signed_in? %>
+                    <li><%= link_to "Profile", root_path %></li>
                     <li><%= link_to "Create", new_board_path %></li>
-                    <% end %>
-                </ul>
-                <ul class="nav navbar-nav">
-                    <% if user_signed_in? %>
                     <li><%= link_to "Find", search_board_path %></li>
                     <% end %>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <% if user_signed_in? %>
-                    <!-- Signed in as <%= current_user.email %> -->
-                    <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+                    <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+                    Signed in as <%= current_user.email %> </li>
                 <% else %>
-                    <li><%= link_to 'Log in', new_user_session_path %></li>
+                    <li><%= link_to 'Register', new_user_registration_path %></li>
+                    <li><%= link_to 'Sign in', new_user_session_path %></li>
                     <% end %>
                 </ul>
             </div>
