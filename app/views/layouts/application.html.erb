@@ -11,10 +11,11 @@
         <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Arima+Madurai:200' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <body id="welcomeindex">
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
-                <ul class="nav navbar-nav">
+                <ul class="nav nav-tabs">
                     <% if user_signed_in? %>
                     <li><%= link_to "Profile", root_path %></li>
                     <li><%= link_to "Create", new_board_path %></li>
