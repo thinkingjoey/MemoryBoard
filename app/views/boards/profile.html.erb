@@ -3,15 +3,12 @@
 <br>
 <br>
 <h1>Profile</h1>
-<!-- <a href="/boards/show">Find a board</a> How to find a board -->
-<div class="profileBackground">
 <% current_user.boards.each do|board|%>
-<table class="table table-hover">
-  <tr>
+<!-- <table class="table table-hover"> -->
+<tr>
   <td>
   <h2><%= link_to board.name, board_path(board) %></h2>
   </td>
 </tr>
-</table>
+<!-- </table> -->
 <% end %>
-</div>

@@ -15,7 +15,7 @@
     <body id="welcomeindex">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
-                <ul class="nav nav-tabs">
+                <ul class="nav navbar-nav">
                     <% if user_signed_in? %>
                     <li><%= link_to "Profile", root_path %></li>
                     <li><%= link_to "Create", new_board_path %></li>
