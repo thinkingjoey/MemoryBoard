@@ -46,6 +46,17 @@ body {
   blink-caret .75s step-end infinite;
 }
 
+#subtitle{
+  z-index: 1;
+  color: white;
+  /*font-size: 8em;*/
+  top: 35%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
 /* The typing effect */
 
 @keyframes typing {
@@ -69,10 +80,8 @@ body {
 li {
   font-family: 'Quicksand', sans-serif;
 }
-h1 {
-  font-family: 'Poiret One', cursive;
-}
-h2, h3 {
+
+h2 {
   font-family: 'Arima Madurai', cursive;
 }
 p {
