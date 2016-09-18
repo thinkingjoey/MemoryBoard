@@ -14,3 +14,6 @@
 ![AccessCode.png](./public/AccessCode.png)
 ###Here you go! Your friends and families can share the pictures on your memory board!
 ![MemoryBoard2](./public/MemoryBoard2.png)
+
+##MemoryBoard is a Ruby on Rails project
+####Thank you for stopping by!
