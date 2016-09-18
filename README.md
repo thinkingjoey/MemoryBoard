@@ -10,10 +10,10 @@
 ###User can create their own memory board (photo album) and upload their event pictures
 ![MemoryBoard1.png](./public/MemoryBoard1.png)
 ###Each board comes with a randomly generated 16-digits code, which can be given to friends and families as an access code
-####Click *find* and *enter* the code to access to the memory board
 ![AccessCode.png](./public/AccessCode.png)
 ###Here you go! Your friends and families can share the pictures on your memory board!
 ![MemoryBoard2](./public/MemoryBoard2.png)
 
 ##MemoryBoard is a Ruby on Rails project
 ####Thank you for stopping by!
+#####Video credit: Tim&Hannah Wedding on Vimeo: https://vimeo.com/94837904
