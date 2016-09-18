@@ -4,13 +4,13 @@
 
 #How Memory Board Works
 
-##Landing page with Sign in / Register
+###Landing page with Sign in / Register
 ![landingPicture](./public/landingPicture.png)
 ![landingPicture2](./public/landingPicture2.png)
-##User can create their own memory board (photo album) and upload their event pictures
+###User can create their own memory board (photo album) and upload their event pictures
 ![MemoryBoard1.png](./public/MemoryBoard1.png)
-##Each board comes with a 16-digits randomly generated code, which can be given to friends and families as an access code
-###Click *find* and *enter* the code to access to the memory board
+###Each board comes with a 16-digits randomly generated code, which can be given to friends and families as an access code
+####Click *find* and *enter* the code to access to the memory board
 ![AccessCode.png](./public/AccessCode.png)
-##Here you go! Your friends and families can share the pictures on your memory board!
+###Here you go! Your friends and families can share the pictures on your memory board!
 ![MemoryBoard2](./public/MemoryBoard2.png)
