@@ -6,7 +6,7 @@
 
 ###Landing page with Sign in / Register
 ![landingPicture](./public/landingPicture.png)
-###User can create their own memory board (photo album) and upload their event pictures
+###Users can create their own memory board (photo album) and upload their event pictures
 ![MemoryBoard1.png](./public/MemoryBoard1.png)
 ###Each board comes with a randomly generated 16-digits code, which can be given to friends and families as an access code
 ![AccessCode.png](./public/AccessCode.png)
