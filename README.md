@@ -10,7 +10,7 @@
 ###Users can create their own memory board (photo album) and upload their event pictures
 ![MemoryBoard1.png](./public/MemoryBoard1.png)
 ###Each board comes with a randomly generated 16-digits code, which can be given to friends and families as an access code
-#### It's your turn! Click "find" and enter this access code "0f884db020a1c6d7" to find this memory board
+#### It's your turn! Click "find" and enter this access code "0f884db020a1c6d7" to find the memory board. Just like the picture below.
 ![AccessCode.png](./public/AccessCode.png)
 ###Here you go! Your friends and families can share the pictures on your memory board!
 ![MemoryBoard2](./public/MemoryBoard2.png)
